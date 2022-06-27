@@ -1,11 +1,11 @@
-
 from django.contrib import admin
 from django.urls import path
-from .views import user, profile
+from .views import profile,user
 
 
 urlpatterns = [
-    path('', user),
-    path('profile/<user_id>', profile) # 1
+    #path('', user),
+    path('',user),
+    path('profile', profile) # 1
 
 ]
