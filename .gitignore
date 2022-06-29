@@ -1,0 +1,7 @@
+# created mannually
+db.sqlite3
+venv/
+.idea/
+__pycache__/
+apidemo/__pycache__/
+user/__pycache__/
