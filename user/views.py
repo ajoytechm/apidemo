@@ -1,7 +1,10 @@
+from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.shortcuts import render
+from .serializers import *
 
 # Create your views here.
+from rest_framework import viewsets, permissions
 
 
 def user(request):
@@ -18,4 +21,12 @@ def profile(request):
     # get request
     return HttpResponse("Hello, this is my profile")
 
+
+class UserViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    queryset = User.objects.all().order_by('-date_joined')
+    serializer_class = UserSerializer
+    permission_classes = []
 

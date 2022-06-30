@@ -18,5 +18,3 @@ class Profile(models.Model):  # user_profiles
     last_name = models.CharField(max_length=50, null=False)
 
 
-# 1. python manage.py makemigrations
-# 2. python manage.py migrate
